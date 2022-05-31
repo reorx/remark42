@@ -9,7 +9,7 @@
   height: 36px;
   font-size: 16px;
   font-family: inherit;
-  background-color: var(--white-color);
+  background-color: rgb(var(--white-color));
   color: var(--color7);
 
   &:hover {
@@ -34,11 +34,11 @@
 }
 
 .input:-webkit-autofill {
-  box-shadow: 0 0 0 1000px var(--white-color) inset;
+  box-shadow: 0 0 0 1000px rgb(var(--white-color)) inset;
   -webkit-text-fill-color: var(--color7);
 
   &:focus {
-    box-shadow: 0 0 0 1000px var(--white-color) inset, 0 0 0 2px var(--color47);
+    box-shadow: 0 0 0 1000px rgb(var(--white-color)) inset, 0 0 0 2px var(--color47);
   }
 
   &::placeholder {
