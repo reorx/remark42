@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   font-size: 14px;
-  color: rgb(var(--primary-color));
+  color: var(--primary-color);
 }
 
 .root > * + *,
@@ -11,7 +11,7 @@
 }
 
 .countdown {
-  color: rgb(var(--secondary-darker-text-color));
+  color: var(--secondary-darker-text-color);
 }
 
 @media (hover: hover) {
@@ -27,6 +27,6 @@
 
 .additionalActions::before {
   content: '•';
-  color: rgb(var(--secondary-text-color));
+  color: var(--secondary-text-color);
   margin-right: 0.5em;
 }

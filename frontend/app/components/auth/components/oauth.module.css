@@ -27,7 +27,7 @@
 
   &::after {
     display: inline-block;
-    color: rgb(var(--secondary-text-color));
+    color: var(--secondary-text-color);
   }
 
   &:hover {

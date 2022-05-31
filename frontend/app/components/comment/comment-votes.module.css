@@ -30,13 +30,13 @@
 
 .upVoteButton:hover,
 .upVoteButtonActive {
-  color: rgb(var(--color12));
+  color: var(--color12);
   opacity: 1;
 }
 
 .downVoteButton:hover,
 .downVoteButtonActive {
-  color: rgb(var(--color30));
+  color: var(--color30);
   opacity: 1;
 }
 
@@ -47,16 +47,16 @@
   border-radius: 3px;
   min-width: 16px;
   text-align: center;
-  color: rgb(var(--secondary-darker-text-color));
+  color: var(--secondary-darker-text-color);
 }
 
 .votesNegative {
-  color: rgb(var(--color30));
+  color: var(--color30);
   background-color: rgba(var(--color30), 0.1);
 }
 
 .votesPositive {
-  color: rgb(var(--color12));
+  color: var(--color12);
   background-color: rgba(var(--color12), 0.1);
 }
 

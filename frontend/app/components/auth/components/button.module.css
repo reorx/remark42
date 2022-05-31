@@ -15,11 +15,11 @@
   font-weight: bold;
   cursor: pointer;
   white-space: nowrap;
-  background-color: rgb(var(--primary-color));
-  color: rgb(var(--white-color));
+  background-color: var(--primary-color);
+  color: var(--white-color);
 
   &:hover {
-    background-color: rgb(var(--primary-brighter-color));
+    background-color: var(--primary-brighter-color);
   }
 
   &:focus {
@@ -53,7 +53,7 @@
 }
 
 .selected:hover {
-  background-color: rgb(var(--primary-color));
+  background-color: var(--primary-color);
 }
 
 .xs {
@@ -68,16 +68,16 @@
 
 .transparent {
   background-color: rgba(var(--primary-color), 0.1);
-  color: rgb(var(--primary-color));
+  color: var(--primary-color);
 
   &:hover {
     background-color: rgba(var(--primary-color), 0.2);
-    color: rgb(var(--primary-color));
+    color: var(--primary-color);
   }
 }
 
 .hollow {
-  color: rgb(var(--primary-color));
+  color: var(--primary-color);
   background-color: unset;
   text-transform: initial;
   width: auto;
@@ -95,7 +95,7 @@
 
   &:hover {
     background-color: unset;
-    color: rgb(var(--primary-brighter-color));
+    color: var(--primary-brighter-color);
   }
 }
 
