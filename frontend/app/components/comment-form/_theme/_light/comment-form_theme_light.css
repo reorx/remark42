@@ -1,6 +1,6 @@
 .comment-form_theme_light {
   border-color: var(--color5);
-  background: var(--color6); /* try to fix textarea blinking in Safari */
+  background: var(--color5); /* try to fix textarea blinking in Safari */
 
   & .comment-form__actions {
     background: var(--color5);

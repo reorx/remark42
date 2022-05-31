@@ -1,3 +1,8 @@
 .comment-form_simple {
-  border-width: 12px;
+  padding: 12px;
+  border-radius: var(--box-radius);
+
+  & .comment-form__field {
+    border-radius: var(--box-radius);
+  }
 }
