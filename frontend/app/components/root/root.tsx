@@ -42,6 +42,7 @@ import { useActions } from 'hooks/useAction';
 import { setCollapse } from 'store/thread/actions';
 
 import styles from './root.module.css';
+import { Admonition } from 'components/admonition';
 
 const mapStateToProps = (state: StoreState) => ({
   sort: state.comments.sort,
@@ -240,18 +241,21 @@ export class Root extends Component<Props, State> {
           ) : (
             <>
               {!isCommentsDisabled && (
-                <CommentForm
-                  id={encodeURI(url || '')}
-                  intl={this.props.intl}
-                  theme={props.theme}
-                  mix="root__input"
-                  mode="main"
-                  user={props.user}
-                  onSubmit={(text: string, title: string) => this.props.addComment(text, title)}
-                  getPreview={this.props.getPreview}
-                  uploadImage={imageUploadHandler}
-                  simpleView={StaticStore.config.simple_view}
-                />
+                <>
+                  <CommentForm
+                    id={encodeURI(url || '')}
+                    intl={this.props.intl}
+                    theme={props.theme}
+                    mix="root__input"
+                    mode="main"
+                    user={props.user}
+                    onSubmit={(text: string, title: string) => this.props.addComment(text, title)}
+                    getPreview={this.props.getPreview}
+                    uploadImage={imageUploadHandler}
+                    simpleView={StaticStore.config.simple_view}
+                  />
+                  {StaticStore.query.admonition && <Admonition json={StaticStore.query.admonition} />}
+                </>
               )}
               {this.props.pinnedComments.length > 0 && (
                 <div

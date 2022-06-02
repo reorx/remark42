@@ -9,6 +9,7 @@ export interface QuerySettingsType {
   url?: string;
   max_shown_comments?: number;
   theme: Theme;
+  admonition?: string;
   /* used in delete users data page */
   token?: string;
   show_email_subscription?: boolean;
