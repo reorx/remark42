@@ -61,7 +61,7 @@ const ImageMimeRegex = /image\//i;
 export const messages = defineMessages({
   placeholder: {
     id: 'commentForm.input-placeholder',
-    defaultMessage: 'Your comment here',
+    defaultMessage: 'Your comment here (Markdown is supported)',
   },
   uploadFileFail: {
     id: 'commentForm.upload-file-fail',
