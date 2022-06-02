@@ -25,6 +25,10 @@ export const messages = defineMessages<string>({
     id: 'auth.email-address',
     defaultMessage: 'Email Address',
   },
+  website: {
+    id: 'auth.website',
+    defaultMessage: 'Website (optional)',
+  },
   token: {
     id: 'token',
     defaultMessage: 'Token',

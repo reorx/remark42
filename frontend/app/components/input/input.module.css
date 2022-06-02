@@ -84,3 +84,11 @@
     box-shadow: 0 0 0 2px var(--error-background);
   }
 }
+
+.checkbox {
+	font-size: 16px;
+}
+
+.checkbox > input {
+	vertical-align: text-top
+}

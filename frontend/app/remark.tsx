@@ -32,6 +32,7 @@ async function init(): Promise<void> {
     throw new Error("Remark42: Can't find root node.");
   }
 
+  // @reorx: Is this duplicated with StaticStore.query?
   const params = parseQuery();
   const locale = getLocale(params);
   const messages = await loadLocale(locale).catch(() => ({}));

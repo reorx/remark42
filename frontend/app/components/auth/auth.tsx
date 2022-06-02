@@ -6,7 +6,7 @@ import { useDispatch } from 'react-redux';
 
 import { BASE_URL, API_BASE } from 'common/constants.config';
 import { setUser } from 'store/user/actions';
-import { Input } from 'components/input';
+import { Input, Checkbox } from 'components/input';
 import { CrossIcon } from 'components/icons/cross';
 import { TextareaAutosize } from 'components/textarea-autosize';
 import { Spinner } from 'components/spinner/spinner';
@@ -353,16 +353,36 @@ export function Auth() {
                       />
                     </div>
                     {view === 'email' && (
-                      <div className={clsx('auth-row', styles.row)}>
-                        <Input
-                          className="auth-input-email"
-                          required
-                          name="email"
-                          type="email"
-                          placeholder={intl.formatMessage(messages.emailAddress)}
-                          disabled={isLoading}
-                        />
-                      </div>
+                      <>
+                        <div className={clsx('auth-row', styles.row)}>
+                          <Input
+                            className="auth-input-email"
+                            required
+                            name="email"
+                            type="email"
+                            placeholder={intl.formatMessage(messages.emailAddress)}
+                            disabled={isLoading}
+                          />
+                        </div>
+                        <div className={clsx('auth-row', styles.row)}>
+                          <Input
+                            className="auth-input-website"
+                            name="website"
+                            type="text"
+                            placeholder={intl.formatMessage(messages.website)}
+                            disabled={isLoading}
+                          />
+                        </div>
+                        <div className={clsx('auth-row', styles.row)}>
+                          <Checkbox
+                            className="auth-input-subscribe"
+                            label="Subscribe to notification"
+                            name="subscribe"
+                            type="checkbox"
+                            disabled={isLoading}
+                          />
+                        </div>
+                      </>
                     )}
                     <input className={styles.honeypot} type="checkbox" tabIndex={-1} autoComplete="off" />
                     {formFooterJSX}
