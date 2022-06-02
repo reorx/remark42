@@ -534,11 +534,21 @@ export class CommentForm extends Component<CommentFormProps, CommentFormState> {
                   )}
                 </div>
               )}
+
+              {simpleView && mode === 'main' && (
+                <div className="comment-form__rss">
+                  {StaticStore.config.email_notifications && StaticStore.query.show_email_subscription && (
+                    <>
+                      <FormattedMessage id="commentForm.subscribe-by" defaultMessage="Subscribe by" />{' '}
+                      <SubscribeByEmail />
+                    </>
+                  )}
+                </div>
+              )}
             </>
           ) : (
             <>
               <Auth />
-              {this.renderMarkdownTip()}
             </>
           )}
         </div>
